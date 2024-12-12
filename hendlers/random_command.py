@@ -4,7 +4,7 @@ import random
 
 random_us = Router()
 
-random_food = [("Кофе - 100"),(" Чай - 50\n"),("Сэндвич - 150\n"),("Суп - 200\n")]
+random_food = ["Кофе - 100"," Чай - 50","Сэндвич - 150","Суп - 200"]
 
 
 @random_us.message(Command("random_food"))

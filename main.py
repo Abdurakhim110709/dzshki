@@ -7,6 +7,8 @@ from hendlers.other_messages import echo_router
 from hendlers.picture import picture
 from hendlers.random_command import random_us
 from hendlers.start import start_router
+from hendlers.review import review_router
+
 
 async def main():
     dp.include_router(hours_router)
@@ -15,6 +17,7 @@ async def main():
     dp.include_router(picture)
     dp.include_router(myinfo)
     dp.include_router(random_us)
+    dp.include_router(review_router)
     dp.include_router(echo_router)
     #Запуск бота
     await dp.start_polling(bot)
