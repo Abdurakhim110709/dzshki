@@ -1,5 +1,8 @@
 from aiogram import Router, types
+
 echo_router = Router()
+
+
 @echo_router.message()
 async def echo_hendler(message: types.Message):
     txt = message.text
