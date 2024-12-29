@@ -9,7 +9,6 @@ get_dihs_router = Router()
 
 @get_dihs_router.message(Command('get_dish'))
 async def get(message: types.Message):
-    data = db.fetch("""SELECT name, cost FROM dish ORDER BY
-    cost""", ())
-    for i in data:
-        await message.answer(f'name:{i['name']}\ncost:{i['cost']}')
+    dishes = db.fetch("SELECT * FROM dish")
+    for i in dishes:
+        await message.answer(f'name: {i["name_dish"]}\ncost: {i["cost_dish"]}\ndescription: {i["description_dish"]}\ncategory: {i["category_dish"]}')

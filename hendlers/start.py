@@ -8,7 +8,7 @@ kb = types.InlineKeyboardMarkup(
     inline_keyboard=[
         [
             types.InlineKeyboardButton(text='Оставить отзыв', callback_data='review')
-        ]
+    ]
     ])
 @start_router.message(Command('start'))
 async def cmd_start(message: types.Message):

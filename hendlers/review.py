@@ -109,7 +109,12 @@ async def process_confirm(message: types.Message, state: FSMContext):
         (?,?,?,?,?,?,?) """, (None, data['name'], data['number_inst'],
                               data['visit_date'], ratings[data['food_rating']],
                               ratings[data['clean']], data['extra_comments']))
+
+
+
         await state.clear()
+
+
 
     elif message.text == 'n':
         await message.answer('OK')

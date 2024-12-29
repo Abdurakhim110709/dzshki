@@ -14,12 +14,13 @@ from hendlers.get_dish import get_dihs_router
 
 
 async def on_startup():
-    database.create_tablse()
+    db.create_tables()
+
 
 
 async def main():
-    db.create_tables()
     dp.include_router(hours_router)
+    db.create_tables()
     dp.include_router(menu_router)
     dp.include_router(add_dish_router)
     dp.include_router(get_dihs_router)
